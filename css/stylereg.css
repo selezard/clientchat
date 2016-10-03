@@ -1,0 +1,89 @@
+body {
+  font: 12px/22px "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: url(../images/005.png) left top;
+}
+
+
+.box {
+  width: 340px;
+  margin: 120px auto;
+  position: relative;
+  z-index: 1;
+}
+
+.tabContainer {
+  height: 275px;
+  border-radius: 20px;
+  display: none;
+  border: solid 1px white;
+  padding: 30px;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #dddddd));
+  background-image: -webkit-linear-gradient(#ffffff, #dddddd);
+  background-image: -moz-linear-gradient(#ffffff, #dddddd);
+  background-image: -o-linear-gradient(#ffffff, #dddddd);
+  background-image: linear-gradient(#ffffff, #dddddd);
+  -webkit-transition: all 0.4s linear;
+  -moz-transition: all 0.4s linear;
+  -o-transition: all 0.4s linear;
+  transition: all 0.4s linear;
+}
+.tabContainer.active {
+  display: block;
+}
+
+.loginTitle {
+  color: #4d4d4d;
+  margin: 0 0 20px 0;
+  padding: 0 0 15px 0;
+  border-bottom: solid 1px #e6e6e6;
+  text-shadow: 1px 1px 0 white;
+}
+
+
+
+.inputWrapper {
+  height: 32px;
+  margin-bottom: 30px;
+  width: 100%;
+  position: relative;
+  font-family: Verdana;
+  color: #4d4d4d;
+  margin: 0 0 20px 0;
+  padding: 0 0 15px 0;
+  text-shadow: 1px 1px 0 white;
+}
+
+
+form h2 {font-family:Verdana;}
+
+input[type=text], input[type=password] {
+  width: 90%;
+  color: #4d4d4d;
+  position: relative;
+  height: 32px;
+  line-height: 32px;
+  border: none;
+  background: none;
+  padding: 0 10px;
+  font-size: 16px;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+
+input {
+  float: right;
+  color: white;
+  height: 32px;
+  border-radius: 5px;
+  color: white;
+  border: solid 1px #0083ff;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #0083ff), color-stop(100%, #0073e0));
+  background: -webkit-linear-gradient(#0083ff, #0073e0);
+  background: -moz-linear-gradient(#0083ff, #0073e0);
+  background: -o-linear-gradient(#0083ff, #0073e0);
+  background: linear-gradient(#0083ff, #0073e0);
+  cursor:pointer;
+}

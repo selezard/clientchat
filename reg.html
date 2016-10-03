@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<HTML>
+<head>
+	<link rel="stylesheet" href="css/stylereg.css" media="screen" type="text/css" />
+	<meta charset="utf-8" />
+	<title>Registration</title>
+	<script type="text/javascript">
+		function valid(form) {
+			var fail = false;
+			var email = form.email.value;
+			var password = form.password.value;
+			var lastpassword = form.lastpassword.value;
+
+			var adr_pattern =/[0-9a-z_-]+@[0-9a-z_-]+\.[a-z]{2,5}/i;
+
+			if(email.split('@').length - 1 == 0)
+				fail = "You entered incorrectly email!";
+			if(adr_pattern.test(email) == false)
+				fail = "You entered incorrectly email!";
+			else if(password == "" || password == " ")
+				fail = "Enter your password!";
+			else if(password != password)
+				fail = "Passwords do not match!";
+			if(fail)
+				alert(fail);
+			else
+				window.location = "https://vk.com/djrams";
+		}
+	</script>
+</head>
+<body>
+<div class="box">
+	<nav id="tabs" class="tabs">
+		<a id="tabRegister" class="iconRegister greenBox" title="Регистрация"></a>
+		</nav>
+	<div id="containerLogin" class="tabContainer active">
+	<form action="" method="post" name="test" id="form">
+		<h2 class="loginTitle">Registration</h2>
+		<div class="loginContent">
+			<div class="inputWrapper">
+		<label for="email">E-mail: </label>
+		<input type="text" name="email" placeholder="Enter e-mail..." id="email"/><br/><br/>
+			</div>
+			<div class="inputWrapper">
+		<label for="password">Password: </label>
+		<input type="password" name="password" placeholder="Enter pass..." id="password"/><br/><br/>
+			</div>
+			<div class="inputWrapper">
+		<label for="lastpassword">Last Password: </label>
+		<input type="password" name="lastpassword" placeholder="Confirm pass..." id="lastpassword"/><br/><br/>
+			</div>
+			<input  type="button" onclick="valid(document.getElementById('form'))" name="button" value="Registration">
+			<p><a href="login.html" class="inputWrapper">I have an account? Come in</a><br>
+			<!-- <button onclick="valid(document.getElementById('form'))" class="blueBox">Registration</button> -->
+		</div>
+	</form>
+	</div>
+</div>
+</body>
+</HTML>
